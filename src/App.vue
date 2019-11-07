@@ -1,28 +1,29 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <mdb-container>
+    <mdb-row>
+      <mdb-col col="6">Left column</mdb-col>
+      <mdb-col col="6">Right column</mdb-col>
+    </mdb-row>
+  </mdb-container>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import { mdbContainer, mdbRow, mdbCol } from "mdbvue";
 export default {
-  name: 'app',
+  name: "App",
   components: {
-    HelloWorld
+    mdbContainer,
+    mdbRow,
+    mdbCol
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
+div[class^="col"],
+div[class*=" col"] {
+  border: 1px dotted black;
 }
 </style>
